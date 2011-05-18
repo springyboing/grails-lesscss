@@ -17,7 +17,8 @@ class LessEngineHelper {
               return
             }
 
-            if (file.name.toLowerCase().endsWith(Constants.LESS_EXTENSION)) {
+            if (file.name.toLowerCase().endsWith(Constants.LESS_EXTENSION) &&
+                !file.name.startsWith(Constants.LESS_TEMPLATE_PREFIX)) {
                 def input = file
                 def output = getOutputFile(file)
                 
